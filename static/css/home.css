@@ -1,0 +1,75 @@
+.flexbox {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin: 100px;
+}
+
+.item-vino {
+   flex: 1 1 calc(25% - 10px);
+   background-color: #f0f0f0;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+.item-vino img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+
+.position {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.slider {
+   background-image: url(../img/casillero-del-diablo-red-blend-red-blend-2021-botella-750-cc.webp);
+   background-size: cover;
+   height: 250px;
+   width: 50%;
+   border-radius: 10px;
+   animation: animate 10s infinite;
+}
+
+@keyframes animate {
+   33% {
+      background-image: url(../img/trivento-golden-reserve-malbec-2017-botella-750-cc.webp);
+      background-size: cover;
+   }
+
+   66% {
+      background-image: url(../img/espumante-cruzat-cuvee-extra-brut-750-cc.jpg);
+      background-size: cover;
+   }
+
+   100% {
+      background-image: url(../img/trivento-golden-reserve-malbec-2017-botella-750-cc.webp);
+      background-size: cover;
+   }
+}
+/* celulares */
+@media screen and (max-width: 767px){
+   .flexbox {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      
+   }
+}
+
+/* tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+   .flexbox {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+      
+   }
+}
+
+

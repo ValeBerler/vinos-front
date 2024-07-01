@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Biblioteca del Vino - Registro</title>
+    <link rel="icon" href="../static/img/logo/wine-glass-svgrepo-com.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="../static/css/registro-style.css">
+    
+</head>
+
+<body>
+    <header>
+         <nav class="navegacion">
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#nuestros-productos">Productos</a>
+            <a href="./servicios.html">Servicios</a>
+            <a href="./registro.html">Registro</a>
+            <a href="./consultas.html">Consultas</a>
+            <a href="./recomendaciones.html">Recomendaciones</a>
+            <div class="img-logo2">
+                <a href="../index.html" style="text-decoration: none;">
+                    <img src="../static/img/logo/wine-glass-svgrepo-com.svg" style="width: 30px;" alt="coupe_wine" id="coupe-wine">
+                    <img src="../static/img/logo/bottle-wine-svgrepo-com.svg" style="width: 50px" alt="bottle_wine" id="bottle-wine">
+                </a>
+            </div>
+        </nav>
+        <section class="textos-header">
+            <h1>La Biblioteca del Vino</h1>
+            <h2>Primera selección</h2>
+        </section>
+        <div>
+
+            <div class="wave" style="height: 150px; overflow: hidden;" >
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255);"></path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="registro">
+
+            <h2> CREAR UNA CUENTA</h2>
+            <br>
+            <br>
+            <form action="#" id="formRegister" method="GET" novalidate>
+                <div class="form-control">
+                    <label>Nombre</label>
+                    <br>
+                    <input type="text" required name="firstname" id="firstname">
+                </div>
+                <div class="error" id="error-firstname"></div>
+                <div class="form-control">
+                    <label>Apellido</label>
+                    <br>
+                    <input type="text" required name="lastname" id="lastname" maxlength="4" minlength="2">
+                </div>
+                <div class="error" id="error-lastname"></div>
+                <div class="form-control">
+                    <label>Sexo</label>
+                    <br>
+                    <select name="sexo" id="sexo">
+                        <option value="mercedes">Prefiero No decirlo</option>
+                        <option value="F">Femenino</option>
+                        <option value="M">Masculino</option>
+                    </select>
+                </div>
+                <div class="error" id="error-sexo"></div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <br>
+                    <input type="email" required name="email" id="email">
+                </div>
+                <div class="error" id="error-email"></div>
+                <div class="form-control">
+                    <label>Contaseña</label>
+                    <br>
+                    <input type="password" required name="password" id="password">
+                </div>
+                <div class="error" id="error-password"></div>
+                <div class="form-control">
+                    <label for="birthdate">Fecha de Nacimiento</label>
+                    <br>
+                    <input type="date" required name="birthdate" id="birthdate">
+                </div>
+                <div class="error" id="error-birthdate"></div>
+                <div class="form-control">
+                    <label>Foto Frente DNI</label>
+                    <br>
+                    <input type="file" name="dni" id="dni" accept=".jpeg, .jpg,.png" onchange="return validarArchivo()">
+                </div>
+                <div class="error" id="error-dni"></div>
+                <div id="visor"></div>
+                <br>
+                <div class="form-terms">
+                    <input type="radio" id="terms" name="terms">
+                    <label for="terms">Acepto términos y condiciones</label>
+                </div>
+                <br>
+                <button type="submit" class="btn-send">Registrarse</button>
+            </form>
+
+        </section>
+    </main>
+    <script src="../static/Js/registro.js"></script>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../static/img/logo/la-biblioteca-del-vino-high-resolution-logo.png" alt="Logo de Biblioteca del vino">
+                    </a>
+                </figure> 
+            </div>
+            <div class="box">
+                <h2>Contacto</h2>
+                <p><a href="tel:08103455577"><img src="../static/img/footer-head.png?v=637944336078100000" alt=""><span> 0810 345 6789</span></a></p>
+                <p><a id="whatsapphdr" href="https://api.whatsapp.com/send?phone=5491199999999" target="_blank" data-content="https://api.whatsapp.com/send?phone=5491199999999"><img src="../static/img/footer-wsp.png?v=637944336085770000" alt=""><span> 1199999999</span></a></p>
+                <p><a href="mailto:contacto@biblioteca-vino.com.ar"><img src="../static/img/footer-carta.png?v=637944336074330000" alt=""><span> contacto@biblioteca-vino.com.ar</span></a></p>
+
+            </div>
+            <div class="box">
+                <h2>Seguinos</h2>
+                    <a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="http://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="http://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="http://youtube.com" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>La Biblioteca del Vino</b> - GRUPO 9 CaC</small>
+        </div>
+    </footer>
+</body>
+
+</html>
